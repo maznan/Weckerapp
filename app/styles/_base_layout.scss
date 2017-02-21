@@ -1,0 +1,31 @@
+
+@import "normalize";
+
+html {
+    font-size: 12px;
+}
+
+$header-height: 3em;
+$footer-height: 5em;
+
+header {
+    height: $header-height;
+}
+footer {
+    height: $footer-height;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+#main.container{
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+body > div {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
