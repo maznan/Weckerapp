@@ -1,0 +1,19 @@
+<h1>Deine Alarme</h1>
+{{#each model as |alarm|}}
+    <h2>{{alarm.title}}</h2>
+    <h2>{{alarm.time}}</h2>
+    <div>    
+        {{#if alarm.on}}
+            <strong>An</strong>
+        {{else}}
+            <strong>Aus</strong>
+        {{/if}}
+        {{#if alarm.repeated}}
+            <strong>Täglich</strong>
+        {{else}}
+            <strong>Einmalig</strong>
+        {{/if}}
+    </div>
+
+    <br>
+{{/each}}
