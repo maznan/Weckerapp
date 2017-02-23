@@ -7,16 +7,24 @@ html {
 
 $header-height: 3em;
 $footer-height: 5em;
+$side-padding: 2rem;
 
 header {
     height: $header-height;
+    background-color: #c4c4c4;
 }
 footer {
     height: $footer-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid grey;
 }
 
 header, footer {
     flex-shrink: 0;
+    overflow:hidden;
+    padding: 0 $side-padding;
 }
 
 #main.container{
@@ -28,4 +36,10 @@ body > div {
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+
+header > h2{
+    margin: auto;
+    line-height: 2em;
+    text-transform: uppercase;
 }
