@@ -1,45 +1,20 @@
 {{#each model as |alarm|}}
-{{#if alarm.on}}
-    <div class="alarmListItem alarmOn">
-        {{#link-to "alarms.edit" alarm tagName="div"}}
-        <h2>{{alarm.title}}</h2>
-        <div>
-            <h1>{{alarm.time}}</h1>
-            <div>    
-                {{#if alarm.on}}
-                    <strong>An</strong>
-                {{else}}
-                    <strong>Aus</strong>
-                {{/if}}
-                {{#if alarm.repeated}}
-                    <strong>Täglich</strong>
-                {{else}}
-                    <strong>Einmalig</strong>
-                {{/if}}
-            </div>
-        </div>
-        {{/link-to}}
+    {{#link-to "alarms.edit" alarm tagName="div"}}
+    <h2>{{alarm.title}}</h2>
+    <h2>{{alarm.time}}</h2>
+    {{/link-to}}
+    <div>    
+        {{#if alarm.on}}
+            <strong>An</strong>
+        {{else}}
+            <strong>Aus</strong>
+        {{/if}}
+        {{#if alarm.repeated}}
+            <strong>Täglich</strong>
+        {{else}}
+            <strong>Einmalig</strong>
+        {{/if}}
     </div>
-{{else}}
-     <div class="alarmListItem">
-        {{#link-to "alarms.edit" alarm tagName="div"}}
-        <h2>{{alarm.title}}</h2>
-        <div>
-            <h1>{{alarm.time}}</h1>
-            <div>    
-                {{#if alarm.on}}
-                    <strong>An</strong>
-                {{else}}
-                    <strong>Aus</strong>
-                {{/if}}
-                {{#if alarm.repeated}}
-                    <strong>Täglich</strong>
-                {{else}}
-                    <strong>Einmalig</strong>
-                {{/if}}
-            </div>
-        </div>
-        {{/link-to}}
-    </div>
-{{/if}}
+
+    <br>
 {{/each}}
