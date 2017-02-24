@@ -2,23 +2,27 @@
 @import "normalize";
 
 html {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 $header-height: 3em;
 $footer-height: 5em;
 $side-padding: 2rem;
+$base-bg-color: #212128;
+$active-type-color:#efefef;
+$type-color:#aaaaaa;
+
 
 header {
     height: $header-height;
-    background-color: #c4c4c4;
+    background-color: $base-bg-color;
 }
 footer {
     height: $footer-height;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid grey;
+    background-color: $base-bg-color;
 }
 
 header, footer {
@@ -30,12 +34,14 @@ header, footer {
 #main.container{
     overflow-y: auto;
     flex-grow: 1;
+    background: radial-gradient(ellipse at center, #34333f 0%,#282730 100%);
 }
 
 body > div {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    color: $type-color;
 }
 
 header > h2{
