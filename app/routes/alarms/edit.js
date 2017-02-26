@@ -8,6 +8,10 @@ export default Ember.Route.extend({
         save(model){
             console.debug(model);
             this.transitionTo('index');
-        }
+        },
+
+        cancel(model){
+        this.transitionTo('index');
+        }        
     }
 });
