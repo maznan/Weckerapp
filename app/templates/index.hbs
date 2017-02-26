@@ -1,45 +1,61 @@
 {{#each model as |alarm|}}
 {{#if alarm.on}}
     <div class="alarmListItem alarmOn">
-        {{#link-to "alarms.edit" alarm tagName="div"}}
-        <h2>{{alarm.title}}</h2>
-        <div>
-            <h1>{{alarm.time}}</h1>
-            <div>    
-                {{#if alarm.on}}
-                    <strong>An</strong>
-                {{else}}
-                    <strong>Aus</strong>
-                {{/if}}
-                {{#if alarm.repeated}}
-                    <strong>Täglich</strong>
-                {{else}}
-                    <strong>Einmalig</strong>
-                {{/if}}
-            </div>
-        </div>
+        {{#link-to "alarms.edit" alarm tagName="h3"}}
+            {{alarm.title}}
         {{/link-to}}
+        <div>
+            {{#link-to "alarms.edit" alarm tagName="h1"}}
+                {{alarm.time}}
+            {{/link-to}}
+            <div class="onoffswitch">
+                {{input type="checkbox" checked=alarm.on name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"}}
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>    
+        </div>
+        
+        <div class="repeatList">    
+            {{#if alarm.repeated}}
+                <strong>Täglich</strong>
+            {{else}}
+                <strong>Einmalig</strong>
+            {{/if}}
+        </div>
     </div>
 {{else}}
      <div class="alarmListItem">
-        {{#link-to "alarms.edit" alarm tagName="div"}}
-        <h2>{{alarm.title}}</h2>
-        <div>
-            <h1>{{alarm.time}}</h1>
-            <div>    
-                {{#if alarm.on}}
-                    <strong>An</strong>
-                {{else}}
-                    <strong>Aus</strong>
-                {{/if}}
-                {{#if alarm.repeated}}
-                    <strong>Täglich</strong>
-                {{else}}
-                    <strong>Einmalig</strong>
-                {{/if}}
-            </div>
-        </div>
+        {{#link-to "alarms.edit" alarm tagName="h3"}}
+            {{alarm.title}}
         {{/link-to}}
+        <div>
+            {{#link-to "alarms.edit" alarm tagName="h1"}}
+                {{alarm.time}}
+            {{/link-to}}
+            <div class="onoffswitch">
+                {{input type="checkbox" checked=alarm.on name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"}}
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>    
+        </div>
+        
+        <div class="repeatList">    
+            {{#if alarm.repeated}}
+                <strong>Täglich</strong>
+            {{else}}
+                <strong>Einmalig</strong>
+            {{/if}}
+        </div>
     </div>
 {{/if}}
 {{/each}}
+{{#link-to "alarms.new" tagName="div"}}
+    <div class="alarmNew">
+        <div class="horizontal"></div>
+        <div class="vertical"></div>
+    </div>
+{{/link-to}}

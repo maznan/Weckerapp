@@ -1,19 +1,61 @@
+@import 'onoffswitch';
 
 .alarmListItem{
-    margin:1em;
-    padding: 0 1em;
+    margin:2em;
     border-bottom: 1px solid $type-color;
+    padding: 0 3em;
 }
 
-.alarmListItem > div > h2{
-    padding-top: 1em;
+.alarmListItem > h3{
+    margin: 0;
 }
 
-.alarmListItem > div >div{
+.alarmListItem > h1{
+    width: 30%;
+}
+
+.alarmListItem > div{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
+
+.repeatList{
+    margin-bottom: 1.5em;
+}
+
 .alarmOn{
     color: $active-type-color;
+}
+
+.alarmNew{
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    background-color: $base-bg-color;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.alarmNew > div{
+    font-size: 3em;
+    text-align: center;
+}
+
+.horizontal, ,.vertical{
+    background-color: $signal-color;
+    margin: auto;
+    position: relative;
+}
+
+.horizontal{
+    height: .15em;
+    width: .9em;
+    top: calc(50% - 0.0525em);
+}
+
+.vertical{
+    height: .9em;
+    width: .15em;
+    top: calc(50% - 0.58em);
 }
