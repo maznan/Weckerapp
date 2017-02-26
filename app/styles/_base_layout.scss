@@ -5,12 +5,13 @@ html {
     font-size: 14px;
 }
 
-$header-height: 3em;
+$header-height: 4em;
 $footer-height: 5em;
 $side-padding: 2rem;
 $base-bg-color: #212128;
 $active-type-color:#efefef;
 $type-color:#aaaaaa;
+$signal-color:#15bf91;
 
 
 header {
@@ -25,9 +26,7 @@ footer {
     background-color: $base-bg-color;
 }
 
-header, footer {
-    flex-shrink: 0;
-    overflow:hidden;
+header {
     padding: 0 $side-padding;
 }
 
@@ -46,6 +45,6 @@ body > div {
 
 header > h2{
     margin: auto;
-    line-height: 2em;
+    line-height: 3em;
     text-transform: uppercase;
 }
