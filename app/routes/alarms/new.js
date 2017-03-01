@@ -2,17 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
       model(){
-        return this.store.createRecord('alarm', {
+        return{
              title: "Alarmtitel",
              time:"07:00",
              on: true,
              repeat: false,
-            });
+            };
     },
 
     actions:{
-        save(newAlarm){
-            this.modelFor('application').push(newAlarm);
+        save(newAlarmProperties){
+            let newAlarm = this.store.createRecord('alarm', newAlarmProperties);
+            newAlarm.save();
             this.transitionTo('index');
         }
     }
