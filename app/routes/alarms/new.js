@@ -1,14 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-      model(params){
-        return{
-             id: Date.now(),
-             time:"07:00",
+      model(){
+        return this.store.createRecord('alarm', {
              title: "Alarmtitel",
+             time:"07:00",
              on: true,
-             repeated: false,
-            };
+             repeat: false,
+            });
     },
 
     actions:{
