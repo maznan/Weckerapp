@@ -19,6 +19,41 @@
     justify-content: space-between;
 }
 
+.indexSettingWrapper{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+}
+
+.onofftoggle{
+    display: flex;
+    flex-direction: row;
+    width: 3.2em;
+    height: 1.5em;
+    margin: auto;
+    background-color: $base-bg-color;
+    border: 2px solid $base-bg-color;
+    border-radius: 1.5em;
+}
+
+.switch{
+    position: relative;
+    margin: auto 0;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    background-color: #34333f;
+}
+
+.toggleOn{
+    flex-direction: row-reverse;
+}
+
+.toggleOn > .switch{
+    background-color: $signal-color;
+}
+
 .repeatList{
     margin-bottom: 1.5em;
 }
@@ -42,7 +77,7 @@
     text-align: center;
 }
 
-.horizontal, ,.vertical{
+.horizontal, .vertical{
     background-color: $signal-color;
     margin: auto;
     position: relative;
