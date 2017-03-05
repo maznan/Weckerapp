@@ -12,16 +12,15 @@
                 <div class="switch"></div>
             </div>
         </div>
-        
-        <div class="repeatList">    
-            <p {{action "toggleMonday" alarm}} class="day {{if alarm.monday 'dayOn'}}">MON</p>
-            <p {{action "toggleThuesday" alarm}} class="day {{if alarm.thuesday 'dayOn'}}">THU</p>
-            <p {{action "toggleWednsday" alarm}} class="day {{if alarm.wednsday 'dayOn'}}">WED</p>
-            <p {{action "toggleThursday" alarm}} class="day {{if alarm.thursday 'dayOn'}}">THU</p>
-            <p {{action "toggleFriday" alarm}} class="day {{if alarm.friday 'dayOn'}}">FRI</p>
-            <p {{action "toggleSaturday" alarm}} class="day {{if alarm.saturday 'dayOn'}}">SAT</p>
-            <p {{action "toggleSunday" alarm}} class="day {{if alarm.sunday 'dayOn'}}">SON</p>
-        </div>
+        {{#link-to "alarms.edit" alarm tagName="div" class="repeatList"}}
+            <p class="day {{if alarm.monday 'dayOn'}}">MON</p>
+            <p class="day {{if alarm.thuesday 'dayOn'}}">THU</p>
+            <p class="day {{if alarm.wednsday 'dayOn'}}">WED</p>
+            <p class="day {{if alarm.thursday 'dayOn'}}">THU</p>
+            <p class="day {{if alarm.friday 'dayOn'}}">FRI</p>
+            <p class="day {{if alarm.saturday 'dayOn'}}">SAT</p>
+            <p class="day {{if alarm.sunday 'dayOn'}}">SON</p>
+        {{/link-to}}
     </div>
 
 {{/each}}
