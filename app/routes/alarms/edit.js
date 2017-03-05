@@ -21,8 +21,61 @@ export default Ember.Route.extend({
             
         },
 
-        cancel(model){
-        this.transitionTo('index');
-        }        
+        toggleMonday(model){
+            if (Ember.get(model, 'monday')){
+                Ember.set(model, 'monday', false);
+            }
+            else{
+                Ember.set(model, 'monday', true);
+            }
+        },
+        toggleThuesday(model){
+            if (Ember.get(model, 'thuesday')){
+                Ember.set(model, 'thuesday', false);
+            }
+            else{
+                Ember.set(model, 'thuesday', true);
+            }
+        },
+        toggleWednsday(model){
+            if (Ember.get(model,'wednsday')){
+                Ember.set(model, 'wednsday', false);
+            }
+            else{
+                Ember.set(model, 'wednsday', true);
+            }
+        },
+        toggleThursday(model){
+            if (Ember.get(model, 'thursday')){
+                Ember.set(model, 'thursday', false);
+            }
+            else{
+                Ember.set(model, 'thursday', true);
+            }
+        },
+        toggleFriday(model){
+            if (Ember.get(model, 'friday')){
+                Ember.set(model, 'friday', false);
+            }
+            else{
+                Ember.set(model, 'friday', true);
+            }
+        },
+        toggleSaturday(model){
+            if (Ember.get(model, 'saturday')){
+                Ember.set(model, 'saturday', false);
+            }
+            else{
+                Ember.set(model, 'saturday', true);
+            }
+        },
+        toggleSunday(model){
+            if (Ember.get(model, 'sunday')){
+                Ember.set(model, 'sunday', false);
+            }
+            else{
+                Ember.set(model, 'sunday', true);
+            }
+        }
     }
 });

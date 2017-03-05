@@ -1,8 +1,17 @@
 <h2>{{model.title}}</h2>
 <h1>{{input value=model.time}}</h1>
 An {{input type="checkbox" checked=model.on}}
-Täglich {{input type="checkbox" checked=model.repeated}}
+
+<div class="repeatList">
+    <h3 {{action "toggleMonday" model}} class="day {{if model.monday 'dayOn'}}">MON</h3>
+    <h3 {{action "toggleThuesday" model}} class="day {{if model.thuesday 'dayOn'}}">THU</h3>
+    <h3 {{action "toggleWednsday" model}} class="day {{if model.wednsday 'dayOn'}}">WED</h3>
+    <h3 {{action "toggleThursday" model}} class="day {{if model.thursday 'dayOn'}}">THU</h3>
+    <h3 {{action "toggleFriday" model}} class="day {{if model.friday 'dayOn'}}">FRI</h3>
+    <h3 {{action "toggleSaturday" model}} class="day {{if model.saturday 'dayOn'}}">SAT</h3>
+    <h3 {{action "toggleSunday" model}} class="day {{if model.sunday 'dayOn'}}">SUN</h3>
+</div>
 
 <h1 {{action "save"}}>Speichern</h1>
-<h1 {{action "cancel"}}>Abbrechen</h1>
+{{#link-to "index" tagName="h1"}}Abbrechen{{/link-to}}
 <h1 {{action "deleteAlarm" model}}>Löschen</h1>

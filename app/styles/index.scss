@@ -1,8 +1,7 @@
 
 
 .alarmListItem{
-    margin:2em;
-    border-bottom: 1px solid $type-color;
+    margin: 3em 2em;
     padding: 0 3em;
 }
 
@@ -55,7 +54,19 @@
 }
 
 .repeatList{
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1.5em;
+    font-weight: 100;
+}
+
+.repeatList > .day{
+    opacity: 0.3;
+}
+
+.repeatList > .dayOn{
+    font-weight: 700;
+    opacity: 1.0;
 }
 
 .alarmOn{
