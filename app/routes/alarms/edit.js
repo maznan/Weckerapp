@@ -21,6 +21,15 @@ export default Ember.Route.extend({
             
         },
 
+        toggleOnOff(model){
+            if(Ember.get(model,'on')){
+                Ember.set(model,'on', false);
+            }
+            else{
+                Ember.set(model,'on', true);
+            }
+        },
+
         toggleMonday(model){
             if (Ember.get(model, 'monday')){
                 Ember.set(model, 'monday', false);
