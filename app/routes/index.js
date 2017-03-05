@@ -14,6 +14,6 @@ export default Ember.Route.extend({
                 alarm.set('on', true);
             };
             alarm.save();
-        },
+        }
      }
 });
