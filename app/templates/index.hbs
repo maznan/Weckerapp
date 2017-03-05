@@ -1,18 +1,16 @@
 {{#each model as |alarm|}}
     <div class="alarmListItem {{if alarm.on 'alarmOn'}}">
-        {{#link-to "alarms.edit" alarm tagName="h3"}}
+        <h1 class="delete" {{action "deleteAlarm" alarm}}>x</h1>
+        {{#link-to "alarms.edit" alarm tagName="h2"}}
             {{alarm.title}}
         {{/link-to}}
-        <div>
-            {{#link-to "alarms.edit" alarm tagName="h1"}}
+        <div class="timeToggleWrapper">
+            {{#link-to "alarms.edit" alarm tagName="h1" class="alarmTime"}}
                 {{alarm.time}}
             {{/link-to}}
-            <div class="indexSettingWrapper">
-                <div {{action "toggleOnOff" alarm}} class="onofftoggle {{if alarm.on 'toggleOn'}}">
-                    <div class="switch"></div>
-                </div>
-                <h1 {{action "deleteAlarm" alarm}}>x</h1>
-            </div>    
+            <div {{action "toggleOnOff" alarm}} class="onofftoggle {{if alarm.on 'toggleOn'}}">
+                <div class="switch"></div>
+            </div>
         </div>
         
         <div class="repeatList">    
