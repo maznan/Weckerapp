@@ -1,9 +1,10 @@
 
 .alarmListItem{
-    margin: 1em 2em;
+    margin: 1em 1em;
     padding: 0.1em 2em 0;
     border-radius: 0.4em;
     background-color: rgba(52, 51, 63, 0.6);
+    opacity: 0.5;
 }
 
 .delete{
@@ -60,19 +61,26 @@
     justify-content: space-between;
     margin-bottom: 1.5em;
     font-weight: 100;
+    line-height: 1em;
 }
 
 .repeatList > .day{
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .repeatList > .dayOn{
-    font-weight: 700;
+    font-weight: 800;
     opacity: 1.0;
+    color: $signal-color;
 }
 
 .alarmOn{
     color: $active-type-color;
+    opacity: 1.0;
+}
+
+.alarmOff .dayOn{
+    color: $type-color;
 }
 
 .alarmNew{

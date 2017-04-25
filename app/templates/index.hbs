@@ -1,5 +1,5 @@
 {{#each model as |alarm|}}
-    <div class="alarmListItem {{if alarm.on 'alarmOn'}}">
+    <div class="alarmListItem {{if alarm.on "alarmOn" "alarmOff"}}">
         <h1 class="delete" {{action "deleteAlarm" alarm}}>x</h1>
         {{#link-to "alarms.edit" alarm tagName="h2"}}
             {{alarm.title}}

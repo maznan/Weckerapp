@@ -7,7 +7,7 @@ html {
 
 $header-height: 4em;
 $footer-height: 5em;
-$side-padding: 2rem;
+$side-padding: 1rem;
 $base-bg-color: #212128;
 $active-type-color:#efefef;
 $type-color:#aaaaaa;
@@ -47,4 +47,5 @@ header > h2{
     margin: auto;
     line-height: 3em;
     text-transform: uppercase;
+    text-align: center;
 }
