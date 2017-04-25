@@ -23,6 +23,15 @@ export default Ember.Route.extend({
             this.transitionTo('index');
         },
 
+        toggleOnOff(model){
+            if(Ember.get(model,'on')){
+                Ember.set(model,'on', false);
+            }
+            else{
+                Ember.set(model,'on', true);
+            }
+        },
+
         toggleMonday(model){
             if (model.monday){
                 Ember.set(model, 'monday', false);
@@ -32,7 +41,7 @@ export default Ember.Route.extend({
             }
         },
         toggleTuesday(model){
-            if (model.thuesday){
+            if (model.tuesday){
                 Ember.set(model, 'tuesday', false);
             }
             else{

@@ -1,13 +1,20 @@
-<h2>{{input value=model.title}}</h2>
-<h1>{{input value=model.time}}</h1>
-An {{input type="checkbox" checked=model.on}}
-<div class="repeatList">
-    <h3 {{action "toggleMonday" model}} class="day {{if model.monday 'dayOn'}}">MON</h3>
-    <h3 {{action "toggleTuesday" model}} class="day {{if model.tuesday 'dayOn'}}">TUE</h3>
-    <h3 {{action "toggleWednsday" model}} class="day {{if model.wednsday 'dayOn'}}">WED</h3>
-    <h3 {{action "toggleThursday" model}} class="day {{if model.thursday 'dayOn'}}">THU</h3>
-    <h3 {{action "toggleFriday" model}} class="day {{if model.friday 'dayOn'}}">FRI</h3>
-    <h3 {{action "toggleSaturday" model}} class="day {{if model.saturday 'dayOn'}}">SAT</h3>
-    <h3 {{action "toggleSunday" model}} class="day {{if model.sunday 'dayOn'}}">SUN</h3>
+<div class="newWrapper">
+    <div {{action "toggleOnOff" model}} class="onofftoggle {{if model.on 'toggleOn'}}">
+        <div class="switch"></div>
+    </div>
+    <form class="inputTitle">{{input value=model.title}}</form>
+    <form class="inputTime">{{input type="time" value=model.time}}</form>
+    <div class="repeatList">
+        <p {{action "toggleMonday" model}} class="day {{if model.monday 'dayOn'}}">MON</p>
+        <p {{action "toggleTuesday" model}} class="day {{if model.tuesday 'dayOn'}}">TUE</p>
+        <p {{action "toggleWednsday" model}} class="day {{if model.wednsday 'dayOn'}}">WED</p>
+        <p {{action "toggleThursday" model}} class="day {{if model.thursday 'dayOn'}}">THU</p>
+        <p {{action "toggleFriday" model}} class="day {{if model.friday 'dayOn'}}">FRI</p>
+        <p {{action "toggleSaturday" model}} class="day {{if model.saturday 'dayOn'}}">SAT</p>
+        <p {{action "toggleSunday" model}} class="day {{if model.sunday 'dayOn'}}">SUN</p>
+    </div>
+    <div class="buttons">
+        <h2 {{action "save" model}}>Save</h2>
+        {{#link-to "index" tagName="h2"}}Cancel{{/link-to}}
+    </div>
 </div>
-<button {{action "save" model}}>Speichern</button>
