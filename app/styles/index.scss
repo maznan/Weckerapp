@@ -107,3 +107,14 @@
     width: .15em;
     top: calc(50% - 0.58em);
 }
+
+.nodatamessage{
+    width: auto;
+    margin:6em auto;
+    text-align: center;
+}
+
+.nodatamessage>a{
+    text-decoration: none;
+    color: $signal-color;
+}

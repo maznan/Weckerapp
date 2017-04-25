@@ -22,8 +22,12 @@
             <p class="day {{if alarm.sunday 'dayOn'}}">SON</p>
         {{/link-to}}
     </div>
+{{else}}
+
+    <h3 class="nodatamessage">Sleep in well <br> or <br> do you want to {{link-to 'get things done' 'alarms.new'}}?</h3>
 
 {{/each}}
+
 {{#link-to "alarms.new" tagName="div"}}
     <div class="alarmNew">
         <div class="horizontal"></div>
