@@ -7,7 +7,7 @@ export default Ember.Route.extend({
              time:"07:00",
              on: true,
              monday: true,
-             thuesday: true,
+             tuesday: true,
              wednsday: true,
              thursday: true,
              friday: true,
@@ -31,12 +31,12 @@ export default Ember.Route.extend({
                 Ember.set(model, 'monday', true);
             }
         },
-        toggleThuesday(model){
+        toggleTuesday(model){
             if (model.thuesday){
-                Ember.set(model, 'thuesday', false);
+                Ember.set(model, 'tuesday', false);
             }
             else{
-                Ember.set(model, 'thuesday', true);
+                Ember.set(model, 'tuesday', true);
             }
         },
         toggleWednsday(model){

@@ -38,12 +38,12 @@ export default Ember.Route.extend({
                 Ember.set(model, 'monday', true);
             }
         },
-        toggleThuesday(model){
-            if (Ember.get(model, 'thuesday')){
-                Ember.set(model, 'thuesday', false);
+        toggleTuesday(model){
+            if (Ember.get(model, 'tuesday')){
+                Ember.set(model, 'tuesday', false);
             }
             else{
-                Ember.set(model, 'thuesday', true);
+                Ember.set(model, 'tuesday', true);
             }
         },
         toggleWednsday(model){
